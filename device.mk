@@ -133,10 +133,10 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 # Kernel Modules are now built dyanamically using the CM build system
 
 # copy all kernel modules under the "modules" directory to system/lib/modules
-#PRODUCT_COPY_FILES += $(shell \
-#    find device/amazon/otter/modules -name '*.ko' \
-#    | sed -r 's/^\/?(.*\/)([^/ ]+)$$/\1\2:system\/lib\/modules\/\2/' \
-#    | tr '\n' ' ')
+PRODUCT_COPY_FILES += $(shell \
+    find device/amazon/otter/modules -name '*.ko' \
+    | sed -r 's/^\/?(.*\/)([^/ ]+)$$/\1\2:system\/lib\/modules\/\2/' \
+    | tr '\n' ' ')
 
 
 $(call inherit-product-if-exists, vendor/amazon/otter/otter-vendor.mk)
