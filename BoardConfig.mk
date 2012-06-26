@@ -34,7 +34,7 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 # Kernel
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 4096
-BOARD_KERNEL_CMDLINE := mem=512M console=ttyO2,115200n8 vram=16M omapfb.vram=0:8M def_disp=lcd2
+BOARD_KERNEL_CMDLINE := mem=512M console=ttyO2,115200n8 vram=16M omapfb.vram=0:8M omapfb.rotate=3 def_disp=lcd2
 TARGET_NO_RADIOIMAGE := true
 TARGET_BOARD_PLATFORM := omap4
 TARGET_NO_BOOTLOADER := true
@@ -117,3 +117,5 @@ BOARD_NEEDS_CUTILS_LOG := true
 #BOARD_USES_SECURE_SERVICES := true
 #BOARD_USE_LEGACY_TOUCHSCREEN := true
 
+# Fix for Webkit
+ENABLE_WEBGL := true
