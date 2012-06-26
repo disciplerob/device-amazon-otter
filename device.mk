@@ -104,12 +104,13 @@ PRODUCT_COPY_FILES +=\
     frameworks/base/data/etc/android.hardware.camera.flash-autofocus.xml:/system/etc/permissions/android.hardware.camera.flash-autofocus.xml
 
 
+#    ro.sf.hwrotation=270 \
+
 PRODUCT_PROPERTY_OVERRIDES := \
     ro.sf.lcd_density=160 \
     dalvik.vm.heapsize=64m \
     wifi.interface=wlan0 \
     wifi.supplicant_scan_interval=120 \
-    ro.sf.hwrotation=270 \
     ro.opengles.version=131072 \
     persist.lab126.chargeprotect=1 \
     com.ti.omap_enhancement=true \
